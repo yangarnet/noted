@@ -11,12 +11,11 @@ import reducers from './reducers';
 
 const store = createStore(reducers);
 
-
 render(
-  <Provider store={store}>
-    <Router>
-      <Application />
-    </Router>
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <Router>
+            <Application />
+        </Router>
+    </Provider>,
+    document.getElementById('root')
 );

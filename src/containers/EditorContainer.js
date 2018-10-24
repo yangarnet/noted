@@ -5,19 +5,24 @@ import { withRouter } from 'react-router-dom';
 import Editor from '../components/Editor';
 
 const mapStateToProps = (state, ownProps) => {
-  const { id } = ownProps.match.params;
-  const note = { id, ...state.notes[id] };
-  return { ...ownProps, ...note };
+    const { id } = ownProps.match.params;
+    const note = { id, ...state.notes[id] };
+    return { ...ownProps, ...note };
 };
 
 const mapDispatchToProps = dispatch => ({
-  onChange(content, id) {
-    dispatch({
-      type: 'UPDATE_NOTE_CONTENT',
-      content,
-      id,
-    });
-  }
+    onChange(content, id) {
+        dispatch({
+            type: 'UPDATE_NOTE_CONTENT',
+            content,
+            id
+        });
+    }
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Editor));
+export default withRouter(
+    connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )(Editor)
+);

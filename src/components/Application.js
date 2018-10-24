@@ -8,14 +8,14 @@ import NoteViewContainer from '../containers/NoteViewContainer';
 import Styles from '../styles.css';
 
 const Application = () => (
-  <div className={Styles.container}>
-    <header className={Styles.header}>
-      <h1 className={Styles.header__title}>Noted</h1>
-    </header>
-    <NoteListContainer />
-    <Route exact path="/" component={EmptyState} />
-    <Route path="/notes/:id" component={NoteViewContainer} />
-  </div>
+    <div className={Styles.container}>
+        <header className={Styles.header}>
+            <h1 className={Styles.header__title}>Noted</h1>
+        </header>
+        <NoteListContainer />
+        <Route exact path="/" component={EmptyState} />
+        <Route path="/notes/:id" component={NoteViewContainer} />
+    </div>
 );
 
 export default Application;
