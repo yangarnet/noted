@@ -6,10 +6,15 @@ import Styles from '../styles.css';
 import 'codemirror/lib/codemirror.css';
 
 class Editor extends React.Component {
-    handleChange = content => {
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(content) {
         const { id, onChange } = this.props;
         onChange(content, id);
-    };
+    }
 
     render() {
         const { body } = this.props;
