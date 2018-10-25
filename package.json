@@ -7,7 +7,7 @@
     "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.development.js",
     "build": "rimraf dist && NODE_ENV=production webpack --config ./config/webpack.config.production.js",
     "test": "jest",
-    "deploy": "aws s3 cp dist/ s3://myfundemoapp.net/ --recursive"
+    "deploy": "aws s3 cp dist/ s3://test-aws-s3-buket --recursive"
   },
   "author": "Steve Kinney <hello@stevekinney.net> (http://stevekinney.net)",
   "license": "MIT",
